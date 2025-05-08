@@ -10,6 +10,7 @@ const pool = new pg.Pool({
     host: process.env.DB_HOST,
     database: process.env.DB_DATABASE,
     max: process.env.DB_CONNECTION_LIMIT,
+    ssl: true,
 });
 
 // Monkey patch .query(...) method to console log all queries before executing it
